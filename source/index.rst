@@ -1,7 +1,7 @@
 ..  Documentation du projet - CSUD template
     
 
-Titre du projet (changer dans `source/index.rst`)
+Wizard of the roast - projet jeu vidéo 
 =================================
 
 ..  toctree::
@@ -11,6 +11,7 @@ Titre du projet (changer dans `source/index.rst`)
     plan.md
     presentation.md
     critique.md
+    apprentissage.md
     references.rst
 
 
