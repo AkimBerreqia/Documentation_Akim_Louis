@@ -14,7 +14,7 @@ Le jeu est lui-même divisé en deux parties : le tutoriel et le niveau 1. Le tu
 
 ## intérêts du projet
 
-Ce projet nous permet de renforcer nos connaissances dans le domaine de gamedev.
+ 
 
 ## Motivations personnelles à réaliser ce projet
 
