@@ -11,7 +11,7 @@ Wizard of the roast - projet jeu vidéo
     plan.md
     presentation.md
     Manuel.md
-    Excplication.md
+    Explication.md
     critique.md
     apprentissage.md
     references.rst

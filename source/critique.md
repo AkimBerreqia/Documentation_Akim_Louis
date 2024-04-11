@@ -3,11 +3,13 @@
 # Regard critique et améliorations
 
 ## Regard critique
-Nous n'avons pas réussi à atteindre tous les objectifs que nous nous étions fixés au début du projet. En examinant le plan initial, nous constatons que nous n'avons pas réussi à créer une histoire pour notre jeu. De plus, le jeu ne contient que des sprites de base fournis par Unity. Enfin, les ennemis se contentent de marcher en ligne droite et sont assez faciles à esquiver.
+Nous n'avons pas réussi à compléter tous les objectifs que nous nous étions fixés au début de ce projet. Par exemple, nous n'avons pas fait d'histoire pour notre jeu. De plus, nous n'avons pas travaillé sur les graphismes par manque de temps, ce qui rend l'atmosphère de notre jeu fade. On aurait aussi pu plus travailler sur les ennemis. En effet, il n'y a que 3 types d'ennemis, en comptant le boss, ce qui ne permet pas une grande variété dans les problèmes encontrés par le joueur.
 
 ## améliorations futures
 
-La principale amélioration future concerne les graphismes. Nous avons choisi de consacrer plus de temps au développement du jeu, ce qui nous a conduit à utiliser des sprites basiques. Pour atteindre cet objectif, nous avons deux options. La première consiste à acheter des packs sur le Unity Store. Cependant, ces packs sont généralement payants et ne garantissent pas nécessairement une cohérence visuelle avec notre projet. L'autre option est de créer nos propres sprites. Le désavantage de cette approche est que nous ne maîtrisons pas forcément cette compétence. Il faudrait donc apprendre à utiliser des logiciels comme Photoshop, ce qui pourrait prendre du temps. Cependant, cette méthode nous permettrait de choisir le style graphique de notre jeu.
+La principale amélioration future concerne les graphismes. Nous avons choisi de consacrer plus de temps au développement du jeu, ce qui nous a conduit à utiliser des sprites basiques. Pour atteindre cet objectif, nous avons deux options. La première consiste à acheter des packs sur le Unity Store. Cependant, ces packs sont généralement payants et ne garantissent pas nécessairement une cohérence visuelle avec notre projet. L'autre option est de créer nos propres sprites. Le désavantage de cette approche est que nous ne maîtrisons pas forcément cette compétence. Il faudrait donc apprendre à utiliser des logiciels comme Photoshop, ce qui pourrait prendre du temps. Cependant, cette méthode nous permettrait de choisir le style graphique de notre jeu et une plus grande cohérence graphique. 
+
+Une autre amélioration serait de rajouter des types d'ennemis et différentes fonctionnalités. Par exemple, on pourrait faire un ennemi qui rentre et sort de terre, ce qui proposerer un différent challenge que les ennemis qui ne fait que marcher en ligne droite. On pourrait aussi rajouter d'autres types d'éléments, en faisant cela nous donnerions plus de possibilités d'approche au joueur.
 
 ## Ce que nous avons appris
 
