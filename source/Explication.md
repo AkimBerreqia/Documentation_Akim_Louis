@@ -252,6 +252,11 @@ Ensuite, "Transform.eulerAngles" va inverser la direction de notre ennemi de "18
 ## Element problématique
 
 ### Akim
+Selon moi, ce qui m'a le plus posé de problème a été de gérer l'emplacement des variables et des méthodes qui doivent être partagées entre certains GameObjects. En ce qui concerne le plus gros blocage, la direction des projectiles a été le plus inconvénient. Les projectiles partageaient tous la même direction, ce qui est problématique lorsque le joueur souhaite tirer deux projectiles dans des directions opposées.
+
+Au départ le script "Shot" appartenait au joueur, étant donné que c'est à partir de sa direction que le projectile doit se diriger. Cependant tous les projectiles partageaient la direction du dernier projectile tiré. Il a fallu alors créer des prefab des projectiles qui ont eux aussi posés problème, puisque en réalité les projectiles sont simplement une copie d'un projectile de base qui lui doit rester constamment dans la scène. Car chaque projectile doit faire référence au script du joueur qui contient la direction actuelle.
+
+C'est pourquoi il n'était pas possible d'instancier à chaque fois le prefab du projectile, mais à la place faire une copie du prefab qui est statique sur la scène.
 
 ### Louis
 Pour moi, l'élément qui m'a posé le plus de problème était le script "Patrol.cs" qui a été analysé au-dessus. 
