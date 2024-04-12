@@ -12,9 +12,6 @@ Par ailleurs, les ennemis du jeu sont répartis en trois catégories distinctes.
 
 Le jeu est lui-même divisé en deux parties : le tutoriel et le niveau 1. Le tutoriel permet au joueur d'apprendre de manière interactive les différentes mécaniques mises en place. Quant au niveau 1, il permet au joueur de découvrir ce que le jeu propose et offre un résumé de ce que nous avons réalisé pour le projet. Il est envisageable d'ajouter de nouveaux niveaux ainsi que différents types d'ennemis pour enrichir et diversifier l'expérience de l'utilisateur.
 
-## intérêts du projet
-
- 
 
 ## Motivations personnelles à réaliser ce projet
 
