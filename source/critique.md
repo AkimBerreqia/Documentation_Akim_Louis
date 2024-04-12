@@ -3,7 +3,9 @@
 # Regard critique et améliorations
 
 ## Regard critique
-Nous n'avons pas réussi à compléter tous les objectifs que nous nous étions fixés au début de ce projet. Par exemple, nous n'avons pas fait d'histoire pour notre jeu. De plus, nous n'avons pas travaillé sur les graphismes par manque de temps, ce qui rend l'atmosphère de notre jeu fade. On aurait aussi pu plus travailler sur les ennemis. En effet, il n'y a que 3 types d'ennemis, en comptant le boss, ce qui ne permet pas une grande variété dans les problèmes encontrés par le joueur.
+Nous nous sommes limités dans nos objectifs que nous nous étions fixés au début de ce projet, pour produire un GamePlay plus intéressant. Par exemple, nous n'avons pas fait d'histoire pour notre jeu. De plus, nous n'avons pas travaillé sur les graphismes par manque de temps, ce qui rend l'atmosphère de notre jeu fade. On aurait aussi pu plus travailler sur les ennemis. En effet, il n'y a que 3 types d'ennemis, en comptant le boss, ce qui ne permet pas une grande variété dans les problèmes rencontrés par le joueur.
+
+A contrario, nous avons pu développer plusieurs items (Jump Pad, Medical Kits, Medical Kit Shelf, différents types de platformes, Roasty Meat), ainsi qu'une variété de projectiles qui enrichissent la façon de jouer au jeu.
 
 ## Améliorations futures
 
