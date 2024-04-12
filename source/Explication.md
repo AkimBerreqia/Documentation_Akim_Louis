@@ -55,10 +55,52 @@ Il y a trois différents types de fichiers importants :
 - Ce fichier contient tous les scripts que nous avons créés. Il permet de voir l'intégralité de notre code dans 1 fichier et nous permet de facilement trouver les fichiers que l'on veut quand on créé un niveau. Il peut être considéré comme l'entry Point quand vous voulez analyser notre code.
 ### 3. GameObjects:
 - Ce fichier contient toutes les informations nécessaires à la création de l'environnement Unity. Il contient tous les éléments que nous avons utilisés et organisés pour faire notre niveau. Il permet aussi de nous faire gagner du temps en faisant passer certains traits, comme les layers, aux éléments plus bas dans le fichier, nous évitant de le faire manuellement.
+
 ## Concepts fondamentaux
 
 ### Akim
 #### 1. UnityEngine.SceneManagement:
+- L'expression "UnityEngine.SceneManagement" est un namespace qui donne accès à des fonctionnalités liées à la gestion des scènes dans Unity.
+    Une "scène" dans Unity représente un environnement de jeu ou une partie spécifique d'un jeu, comme un niveau ou un menu. Le système de gestion des scènes permet de charger, décharger et manipuler différentes scènes pendant l'exécution du jeu.
+
+    En incluant "UnityEngine.SceneManagement", vous avez accès à des classes et des méthodes qui vous permettent de contrôler le chargement et la transition entre les scènes dans votre jeu. Par exemple, vous pouvez charger une nouvelle scène lorsque le joueur atteint un certain objectif, ou passer d'un niveau à un autre lorsque le joueur termine un niveau. Cela donne au développeur un contrôle précis sur la structure et le flux du jeu.
+
+    Prenons pour exemple le fichier "BuildScene.cs". Il contient la méthode "SceneManager.LoadScene()" qui permet de recharger n'importe quelle scène qui a son nom dans les parenthèses. Ceci signifie que les éléments qui ont été changés se retrouve présents comme ils l'étaient la première fois que la scène a été chargée.
+
+    1. Il y a bien évidemment des propriétés qui sont dites statiques, dont certaines statiques:
+    - SceneManagement.loadedSceneCount -> retourne le nombre de scènes chargées.
+    - SceneManagement.sceneCount -> retourne le nombre de scènes.
+    - SceneManagement.sceneCountInBuildSettings -> retourne le nombre de scène présentent dans les Build Settings (ceci est l'endroit dans lequel sont stockés les scènes qui seront utilisées lorsque le projet est construit/built).
+
+    2. Ensuite il y a d'autres méthodes qui sont statiques:
+    - SceneManagement.CreateScene
+    
+    - SceneManagement.GetActiveScene
+    - SceneManagement.SetActiveScene
+    
+    - SceneManagement.GetSceneAt
+    
+    - SceneManagement.GetSceneByBuildIndex
+    - SceneManagement.GetSceneByName
+    - SceneManagement.GetSceneByPath
+    
+    - SceneManagement.LoadScene -> précédemment présentée
+    - SceneManagement.LoadSceneAsync -> charge la scène de manière asynchrone, en arrière plan, avec les autres scènes chargées.
+    - SceneManagement.UnloadSceneAsync
+
+    - SceneManagement.MergeScenes -> fusionne la scène source dans la scène de destination.
+
+    - SceneManagement.MoveGameObjectsToScene -> permet de déplacer certains GameObject d'une scène à l'autre.
+    - SceneManagement.MoveGameObjectToScene -> permet de déplacer un seul GameObject d'une scène à l'autre.
+
+    3. Finalement il reste trois événements pour le namespace "SceneManagement" sont:
+    - SceneManagement.activeSceneChanged -> la scène souscrit à cet événement pour être notifié lorsque des scènes actives changent.
+    
+    - SceneManagement.sceneLoaded -> ajoute un délégué à cet événement d'être notifié d'une scène chargée.
+    - SceneManagement.sceneUnloaded
+
+- Dans le cas de notre projet, le namespace est utilisé uniquement sur des boutons, qui ont pour objectif la navigation entre les différentes scènes, qui correspondent à des niveaux, ou à la page d'accueil du jeu.
+
 
 ### Louis
 #### 1. StartCoroutine:
