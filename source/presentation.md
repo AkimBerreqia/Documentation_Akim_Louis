@@ -17,7 +17,13 @@ Le jeu est lui-même divisé en deux parties : le tutoriel et le niveau 1. Le tu
 
 ### Akim
 
-Ayant toujours eu une passion pour le développement de jeux vidéos, ce projet me permet donc de tester mes connaissances en coding et gamedev.
+Ayant toujours eu une passion pour le développement de jeux vidéo, ce projet représente pour moi bien plus qu'une simple expérience. C'est une opportunité de mettre à l'épreuve mes connaissances en programmation et en développement de jeux. En explorant les aspects pratiques du coding et du GameDev, je pourrai non seulement concrétiser mes idées, mais aussi affiner mes compétences dans ces domaines qui me passionnent tant.
+
+La possibilité de créer un projet avec un résultat réel sous les yeux est extrêmement motivante. Au lieu de simplement théoriser sur des concepts concrets, je pourrai voir mes idées prendre forme et évoluer au fil du développement. Cela ajoute une dimension concrète à mon apprentissage, me permettant de mieux comprendre les défis et les succès qui accompagnent la création d'un jeu vidéo.
+
+Un aspect stimulant de ce projet est la chance d'élargir mes connaissances en programmation en apprenant un nouveau langage. En explorant un langage de programmation différent, je serai confronté à de nouveaux modèles et à des approches uniques pour résoudre des problèmes. Cela me permettra de diversifier mes compétences et d'acquérir une perspective plus complète sur le développement de logiciels.
+
+Enfin, la perspective de pouvoir jouer à mon propre jeu vidéo est incroyablement gratifiante. Créer quelque chose de divertissant et captivant pour les autres est une récompense en soi, mais avoir la possibilité de plonger dans l'univers que j'ai créé et d'en découvrir chaque aspect de manière interactive est une expérience tout à fait spéciale. Cette satisfaction personnelle alimente ma motivation à poursuivre mes efforts et à réaliser mon projet de jeu vidéo.
 
 ### Louis
 
