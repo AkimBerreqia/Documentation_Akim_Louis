@@ -17,13 +17,6 @@ Wizard of the roast - projet jeu vidéo
     references.rst
 
 
-..  toctree::
-    :maxdepth: 2
-    :caption: Tutoriel Sphinx
-
-    tutoriel-sphinx/index.rst
-
-
 ..
     Indices and tables
     ==================
