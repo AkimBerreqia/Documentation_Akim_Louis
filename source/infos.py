@@ -1,7 +1,7 @@
 class DocumentInfos:
 
     title = u'Wizard of the roast - projet jeu vidéo'
-    first_name = 'Berreqia Akim,'
+    first_name = 'Berreqia Akim &'
     last_name = 'Fanton Louis'
     author = f'{first_name} {last_name}'
     year = u'2024'

@@ -6,22 +6,28 @@
 
 ### Akim
 
+Je me suis occupé de faire les attaques du joueur, ainsi que le système de menus (pour changer de niveau, pour mettre le jeu en pause, pour accéder aux différents types de projectiles). J'ai également produit le système de santé du joueur et des ennemis et le système de mana du joueur.
 #### fichiers
 ##### 1. WinGame.cs:
-- Ce fichier contrôle si le joueur rentre en collision avec le "Roasty Meat". Si c'est le cas, alors la méthode "Win()" se lance et affiche le menu de victoire.
+Ce fichier contrôle si le joueur rentre en collision avec le "Roasty Meat". Si c'est le cas, alors la méthode "Win()" se lance et affiche le menu de victoire.
 ##### 2. UnlockBlockingPlatforms.cs:
-- Quant à ce fichier, il contient l'integer "lockers", qui est égal à l'integer "lockers" du fichier Blocker.cs pour chaque update.
+Quant à ce fichier, il contient l'integer "lockers", qui est égal à l'integer "lockers" du fichier Blocker.cs pour chaque update.
 ##### 3. StartGame.cs:
-- Ce fichier est utilisé pour le Home Menu. Il contient trois méthodes. La première,"ChooseLevel()", est utilisée quand le button "CHOOSE LEVEL" est enclenché. Cela cache la fenêtre d'accueil pour montrer la fenêtre de choix de niveau.
-- La deuxième méthode, "Back()", fait l'action inverse de "ChooseLevel()".
-- Et pour la dernière méthode, "QuitGame()", elle ferme l'application. 
+Ce fichier est utilisé pour le Home Menu. Il contient trois méthodes. La première,"ChooseLevel()", est utilisée quand le button "CHOOSE LEVEL" est enclenché. Cela cache la fenêtre d'accueil pour montrer la fenêtre de choix de niveau.
+
+La deuxième méthode, "Back()", fait l'action inverse de "ChooseLevel()".
+
+Et pour la dernière méthode, "QuitGame()", elle ferme l'application. 
 ##### 4. Shot.cs:
-- Dans ce fichier, il y a des informations qui font références aux différents composants et objets nécessaires au script.
-- Ensuite, il y a des variables publiques pour le projectile lié au script et le mouvement du joueur, puisque la direction du joueur influence le point de départ du projectile. En général, le script s'occupe d'ordonner les actions de chaque projectile (déplacement et possède le script pour attaquer un ennemi). Si le projectile est rouge et qu'il touche un ennemi, alors le booléen "isFired" est vrai. Ce booléen provient du script de l'ennemi touché, afin qu'il continue de subir des dégâts sur la durée.
-- Suivant le type de projectile, le projectile est visible ou non. Par exemple les projectiles vert sont des bonus au joueur, donc ils sont invisibles, puisqu'ils ne servent pas à attaquer.
-- Si le projectile est vert, alors le prochain a un bonus sur sa vitesse de déplacement et ses dégâts.
+Dans ce fichier, il y a des informations qui font références aux différents composants et objets nécessaires au script.
+
+Ensuite, il y a des variables publiques pour le projectile lié au script et le mouvement du joueur, puisque la direction du joueur influence le point de départ du projectile. En général, le script s'occupe d'ordonner les actions de chaque projectile (déplacement et possède le script pour attaquer un ennemi). Si le projectile est rouge et qu'il touche un ennemi, alors le booléen "isFired" est vrai. Ce booléen provient du script de l'ennemi touché, afin qu'il continue de subir des dégâts sur la durée.
+
+Suivant le type de projectile, le projectile est visible ou non. Par exemple les projectiles vert sont des bonus au joueur, donc ils sont invisibles, puisqu'ils ne servent pas à attaquer.
+
+Si le projectile est vert, alors le prochain a un bonus sur sa vitesse de déplacement et ses dégâts.
 ##### 5. SetHealth.cs:
-- 
+
 ##### 6. Projectile.cs
 ##### 7. Power.cs
 ##### 8. PlayerHealth.cs
@@ -37,7 +43,7 @@
 ##### 18. Blocker.cs
 ### Louis
 
-Je me suis occupé du mouvement du joueur et des ennemis ainsi que de la construction des niveaux.
+Je me suis occupé du mouvement du joueur et des ennemis ainsi que de la construction des niveaux (différents types de platformes -> de base, qui tombe ou qui bloque temporairement l'accès à la suite du niveau).
 #### fichiers
 ##### 1. CameraFollow.cs
 ##### 2. FallingPlatform.cs
@@ -50,40 +56,84 @@ Je me suis occupé du mouvement du joueur et des ennemis ainsi que de la constru
 ## Principaux fichiers
 Il y a trois différents types de fichiers importants :
 ### 1. Scenes:
-- Ce fichier contient tous les différents niveaux dans notre jeu. Unity l'utilise pour afficher les différents sprites et nous permet de les construires. Cependant, il est automatiquement généré, ce qui veut dire que les fichiers inclus sont quasiment illisibles et nous ne pouvons pas le changer directement sans casser le jeu.
+Ce fichier contient tous les différents niveaux dans notre jeu. Unity l'utilise pour afficher les différents sprites et nous permet de les construires. Cependant, il est automatiquement généré, ce qui veut dire que les fichiers inclus sont quasiment illisibles et nous ne pouvons pas le changer directement sans casser le jeu.
 ### 2. Script:
-- Ce fichier contient tous les scripts que nous avons créés. Il permet de voir l'intégralité de notre code dans 1 fichier et nous permet de facilement trouver les fichiers que l'on veut quand on créé un niveau. Il peut être considéré comme l'entry Point quand vous voulez analyser notre code.
+Ce fichier contient tous les scripts que nous avons créés. Il permet de voir l'intégralité de notre code dans 1 fichier et nous permet de facilement trouver les fichiers que l'on veut quand on créé un niveau. Il peut être considéré comme l'entry Point quand vous voulez analyser notre code.
 ### 3. GameObjects:
-- Ce fichier contient toutes les informations nécessaires à la création de l'environnement Unity. Il contient tous les éléments que nous avons utilisés et organisés pour faire notre niveau. Il permet aussi de nous faire gagner du temps en faisant passer certains traits, comme les layers, aux éléments plus bas dans le fichier, nous évitant de le faire manuellement.
+Ce fichier contient toutes les informations nécessaires à la création de l'environnement Unity. Il contient tous les éléments que nous avons utilisés et organisés pour faire notre niveau. Il permet aussi de nous faire gagner du temps en faisant passer certains traits, comme les layers, aux éléments plus bas dans le fichier, nous évitant de le faire manuellement.
 
 ## Concepts fondamentaux
 
-### Akim
-#### 1. UnityEngine.SceneManagement:
-- L'expression "UnityEngine.SceneManagement" est un namespace qui donne accès à des fonctionnalités liées à la gestion des scènes dans Unity.
-    Une "scène" dans Unity représente un environnement de jeu ou une partie spécifique d'un jeu, comme un niveau ou un menu. Le système de gestion des scènes permet de charger, décharger et manipuler différentes scènes pendant l'exécution du jeu.
+### 1. Fonctionnement du logiciel Unity
 
-    En incluant "UnityEngine.SceneManagement", vous avez accès à des classes et des méthodes qui vous permettent de contrôler le chargement et la transition entre les scènes dans votre jeu. Par exemple, vous pouvez charger une nouvelle scène lorsque le joueur atteint un certain objectif, ou passer d'un niveau à un autre lorsque le joueur termine un niveau. Cela donne au développeur un contrôle précis sur la structure et le flux du jeu.
+Unity est un logiciel de création de jeux vidéo largement utilisé par les développeurs du monde entier pour concevoir des expériences interactives. Cette rubrique vise à expliquer les bases de son fonctionnement pour ceux qui souhaitent comprendre comment Unity peut être utilisé pour créer des jeux vidéo.
 
-    Prenons pour exemple le fichier "BuildScene.cs". Il contient la méthode "SceneManager.LoadScene()" qui permet de recharger n'importe quelle scène qui a son nom dans les parenthèses. Ceci signifie que les éléments qui ont été changés se retrouve présents comme ils l'étaient la première fois que la scène a été chargée.
+Unity repose sur un modèle de composants et d'objets. Dans ce modèle, les développeurs créent des "GameObjects" qui représentent des entités dans le jeu, comme des personnages, des objets ou des décors. Ces GameObjects sont ensuite enrichis de fonctionnalités grâce à des "Components" (composants) qui définissent leur comportement.
 
-    1. Il y a bien évidemment des propriétés qui sont dites statiques, dont certaines statiques:
+Les "Scènes" sont des environnements distincts dans lesquels évoluent les jeux créés avec Unity. Chaque scène peut contenir différents éléments tels que des personnages, des décors, etc. Les transitions entre les scènes permettent de créer des changements d'environnement et de narrative dans le jeu.
+
+Unity intègre un système de physique réaliste qui permet de simuler les interactions entre les objets du jeu. Cela inclut la gestion de la gravité, des collisions, des forces, etc. Ce système donne aux développeurs la possibilité de créer des mouvements et des interactions crédibles dans le jeu. Ce système est utilisé afin de soumettre le joueur à la gravité. Il est retenu par la collision avec les platformes qui l'empêchent de tomber dans le vide. Il y a également des zones de "Trigger" qui fonctionnent comme les collision, mais elle servent seulement à détecter que deux GameObjects rentre en contact. Cependant un "Trigger" ne va pas retenir l'autre GameObject, ce dernier va continuer son chemin.
+
+Unity supporte le scripting en C#, un langage de programmation largement utilisé. Les développeurs utilisent des scripts pour contrôler le comportement des GameObjects, implémenter la logique du jeu et gérer les interactions entre les différents éléments du jeu. Les scripts peuvent être attachés aux GameObjects pour définir leur comportement. Unity met aussi à disposition une API riche en fonctionnalités. ([API du scripting de Unity](https://docs.unity3d.com/ScriptReference/))
+
+Unity permet l'utilisation d'une variété de ressources telles que des textures, des sons, des animations, etc. Ces ressources peuvent être importées dans le projet et utilisées pour enrichir le jeu. Unity offre également des outils intégrés pour éditer et manipuler ces ressources directement dans l'interface utilisateur. Cependant au vu de l'avancé du projet, il a été préférable de laisser de côté certains de ces aspects.
+
+Comprendre le fonctionnement de Unity est essentiel pour quiconque souhaite créer des jeux vidéo. Avec ses fonctionnalités puissantes et son interface conviviale, Unity offre un environnement de développement robuste pour concrétiser des idées de jeu. Cette rubrique fournit donc une introduction aux principes fondamentaux de Unity pour ceux qui souhaitent explorer le monde fascinant de la création de jeux vidéo.
+
+### 2. Formats de fichiers utilisés par Unity
+Unity utilise plusieurs formats de fichiers pour stocker les données liées aux projets de jeux vidéo. Comprendre ces formats est important pour gérer efficacement les assets et les configurations du projet. Voici une brève explication des principaux formats de fichiers utilisés par Unity :
+
+1. **.unity** : Les fichiers avec l'extension .unity sont des scènes Unity. Chaque fichier .unity correspond à une scène spécifique de votre jeu, où vous pouvez placer des GameObjects, des lumières, des caméras, etc. Ces fichiers contiennent des données de configuration de la scène et peuvent être ouverts et édités dans l'éditeur Unity.
+
+2. **.meta** : Les fichiers .meta sont des fichiers de métadonnées associés à chaque asset dans votre projet Unity. Chaque asset (comme un modèle 3D, une texture, un script, etc.) a son propre fichier .meta qui contient des informations telles que son GUID unique (Globally Unique Identifier), son type, son nom, etc. Le GUID est un identifiant unique attribué à chaque asset lors de sa création dans Unity, ce qui permet à Unity de suivre les références entre les différents assets et de gérer les modifications apportées.
+
+3. **.prefab** : Les fichiers .prefab sont des objets préfabriqués Unity. Un prefab est un GameObject complet avec tous ses composants et paramètres configurés, que vous pouvez réutiliser dans différentes scènes de votre projet. Les fichiers .prefab stockent les données de configuration du prefab, y compris les composants attachés et leurs paramètres.
+
+Tous ces formats de fichiers sont basés sur le format de sérialisation YAML (YAML Ain't Markup Language). Le YAML est un format de texte simple et lisible par l'homme qui est utilisé par Unity pour stocker les données de configuration des projets. Cela rend les fichiers facilement lisibles et modifiables, que ce soit directement dans un éditeur de texte ou dans l'interface Unity.
+
+En comprenant ces formats de fichiers et leur fonctionnement, les développeurs peuvent gérer efficacement les assets de leur projet, suivre les modifications et collaborer plus efficacement sur le développement du jeu.
+
+### 3. UnityEngine.SceneManagement:
+L'expression "UnityEngine.SceneManagement" est un namespace qui donne accès à des fonctionnalités liées à la gestion des scènes dans Unity.
+Une "scène" dans Unity représente un environnement de jeu ou une partie spécifique d'un jeu, comme un niveau ou un menu. Le système de gestion des scènes permet de charger, décharger et manipuler différentes scènes pendant l'exécution du jeu.
+
+En incluant "UnityEngine.SceneManagement", vous avez accès à des classes et des méthodes qui vous permettent de contrôler le chargement et la transition entre les scènes dans votre jeu. Par exemple, vous pouvez charger une nouvelle scène lorsque le joueur atteint un certain objectif, ou passer d'un niveau à un autre lorsque le joueur termine un niveau. Cela donne au développeur un contrôle précis sur la structure et le flux du jeu.
+
+Prenons pour exemple le fichier "BuildScene.cs" :
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class BuildScene : MonoBehaviour
+{
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1.0f;
+    }
+}
+```
+Il contient la méthode "SceneManager.LoadScene()" qui permet de recharger n'importe quelle scène qui a son nom dans les parenthèses. Ceci signifie que les éléments qui ont été changés se retrouve présents comme ils l'étaient la première fois que la scène a été chargée.
+
+1. Il y a bien évidemment des propriétés qui sont dites statiques, dont certaines statiques:
     - SceneManagement.loadedSceneCount -> retourne le nombre de scènes chargées.
     - SceneManagement.sceneCount -> retourne le nombre de scènes.
     - SceneManagement.sceneCountInBuildSettings -> retourne le nombre de scène présentent dans les Build Settings (ceci est l'endroit dans lequel sont stockés les scènes qui seront utilisées lorsque le projet est construit/built).
 
-    2. Ensuite il y a d'autres méthodes qui sont statiques:
+2. Ensuite il y a d'autres méthodes qui sont statiques:
     - SceneManagement.CreateScene
-    
+
     - SceneManagement.GetActiveScene
     - SceneManagement.SetActiveScene
-    
+
     - SceneManagement.GetSceneAt
-    
+
     - SceneManagement.GetSceneByBuildIndex
     - SceneManagement.GetSceneByName
     - SceneManagement.GetSceneByPath
-    
+
     - SceneManagement.LoadScene -> précédemment présentée
     - SceneManagement.LoadSceneAsync -> charge la scène de manière asynchrone, en arrière plan, avec les autres scènes chargées.
     - SceneManagement.UnloadSceneAsync
@@ -93,47 +143,47 @@ Il y a trois différents types de fichiers importants :
     - SceneManagement.MoveGameObjectsToScene -> permet de déplacer certains GameObject d'une scène à l'autre.
     - SceneManagement.MoveGameObjectToScene -> permet de déplacer un seul GameObject d'une scène à l'autre.
 
-    3. Finalement il reste trois événements pour le namespace "SceneManagement" sont:
+3. Finalement il reste trois événements pour le namespace "SceneManagement" sont:
     - SceneManagement.activeSceneChanged -> la scène souscrit à cet événement pour être notifié lorsque des scènes actives changent.
-    
+
     - SceneManagement.sceneLoaded -> ajoute un délégué à cet événement d'être notifié d'une scène chargée.
     - SceneManagement.sceneUnloaded
 
-- Dans le cas de notre projet, le namespace est utilisé uniquement sur des boutons, qui ont pour objectif la navigation entre les différentes scènes, qui correspondent à des niveaux, ou à la page d'accueil du jeu.
+Dans le cas de notre projet, le namespace est utilisé uniquement sur des boutons, qui ont pour objectif la navigation entre les différentes scènes, qui correspondent à des niveaux, ou à la page d'accueil du jeu.
 
 
-### Louis
-#### 1. StartCoroutine:
-- Une Coroutine est, dans Unity, une fonction qui dure pendant plusieurs secondes. 
+### 4. StartCoroutine:
+Une Coroutine est, dans Unity, une fonction qui dure pendant plusieurs secondes. 
 
-    Exemple FallingPlatform.cs :
-    ```C#
-    public class FallingPlatform : MonoBehaviour
+Exemple FallingPlatform.cs :
+```C#
+public class FallingPlatform : MonoBehaviour
+{
+private float fallDelay = 0f;
+private float destroyDelay = 2f;
+
+[SerializeField] private Rigidbody2D rb;
+
+private void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Player"))
     {
-    private float fallDelay = 0f;
-    private float destroyDelay = 2f;
-
-    [SerializeField] private Rigidbody2D rb;
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            StartCoroutine(Fall());
-        }
+        StartCoroutine(Fall());
     }
+}
 
-    private IEnumerator Fall()
-    {
-        yield return new WaitForSeconds(fallDelay);
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        Destroy(gameObject, destroyDelay);
-    }
-    }
-    ```
-    Dans cet exemple, la Coroutine est la fonction "Fall()". Avec "StartCoroutine()" "Fall()" va se lancer. Cependant, si "Fall()" était une fonction de base, la platforme tomberait immédiatement, mais, comme "Fall()" est une Coroutine, il faut attendre "fallDelay" secondes pour qu'elle tombe.
+private IEnumerator Fall()
+{
+    yield return new WaitForSeconds(fallDelay);
+    rb.bodyType = RigidbodyType2D.Dynamic;
+    Destroy(gameObject, destroyDelay);
+}
+}
+```
+Dans cet exemple, la Coroutine est la fonction "Fall()". Avec "StartCoroutine()" "Fall()" va se lancer. Cependant, si "Fall()" était une fonction de base, la platforme tomberait immédiatement, mais, comme "Fall()" est une Coroutine, il faut attendre "fallDelay" secondes pour qu'elle tombe.
 
-## Explication du code
+
+## Explication du code détaillée sur un fichier
 
 ### Akim
 
