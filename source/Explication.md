@@ -282,9 +282,11 @@ Ce script permet d'actualiser le nombre de "Medical Kits" en possession du joueu
 
 Au départ le joueur commence avec zéro "Medical Kits", puis s'il entre dans la zone de "Trigger" d'un "Medical Kit", alors ce dernier disparaît pour augmenter de un la quantité possédé par le joueur. Cela fonctionne si le joueur n'a pas sa quantité maximale de "Medical Kits" atteinte. Dans ce cas,  il ne se passe rien.
 
-Si à la place, le joueur entre dans la zone de "Trigger" d'un "Medical Kit Shelf", alors un texte apparait à l'écran pour signaler que le joueur peut remplir sa quantité de "Medical Kits" au maximum.
+Si à la place, le joueur entre dans la zone de "Trigger" d'un "Medical Kit Shelf", alors un texte apparait à l'écran pour signaler que le joueur peut remplir sa quantité de "Medical Kits" au maximum, en appuyant sur la touche "E" du clavier.
 
 Sinon, le joueur peut appuyer sur la touche "H" du clavier pour consommer un "Medical Kit", à condition que sa santé ne soit pas au maximum, et que le joueur contienne au moins un "Medical Kit".
+
+Les deux actions précédemment développées ne peuvent pas fonctionner si le jeu est en pause.
 ##### 10. Mana.cs
 Le script s'occupe de gérer le niveau de mana, qui est plein quand la scène est chargée. Si le joueur tire un projectile, alors son niveau de mana diminue. Ceci peut aller jusqu'à que son niveau de mana soit à zéro.
 
@@ -320,7 +322,11 @@ L'"Update()" vérifie quand les ennemis de la zone sont morts. Si cette conditio
 
 Si le menu pause est activé, alors la barre de vie du Boss doit être inactive.
 ##### 16. BuildScene.cs
+Ce script contient une méthode public qui est utilisé par les scripts "GameOverAndPauseMenu.cs" et "StartGame.cs", afin de changer de scène.
 ##### 17. Blocker.cs
+Ce script stocke l'integer "lockers", qui permet de savoir combien d'ennemis il reste au joueur à tuer pour rendre inactif une "Blocking Platform" qui bloque le passage.
+
+Lorsque le joueur rentre en collision avec la zone de "Trigger" qui est liée à ce script, la "Blocking Platform" devient active.
 
 ### Louis
 
@@ -442,6 +448,7 @@ Ensuite, "Transform.eulerAngles" va inverser la direction de notre ennemi de "18
 ##### 5. PlayerMovement.cs
 ##### 6. PlayerTeleport.cs
 ##### 7. Teleporter.cs
+##### 8. PlayerTeleport.cs
 
 ## Principaux fichiers
 Il y a trois différents types de fichiers importants :
